@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import { Queue, DoubleQueue } from './index.js'
+    var s = new Queue()
+    s.put(1)
+    s.put(2)
+    s.put(3)
+    console.log(s.peek())
+    s.out()
+    console.log(s.peek())
+    s.forEach(item => {
+      console.log(item)
+    })
+
+
+    var ss = new DoubleQueue()
+    ss.putHead(1)
+    ss.putBack(21)
+    ss.putBack(211)
+    ss.putBack(2111)
+    ss.putBack(21111)
+    ss.putBack(211111)
+    ss.putBack(2111111)
+    ss.putBack(21111111)
+    ss.putBack(211111111)
+    console.log('DoubleQueue',ss.data, ss.peek())
+    ss.putHead(25)
+    ss.putHead(256)
+    ss.putHead(2565)
+    console.log('DoubleQueue',ss.data, ss.peek())
+  </script>
+</body>
+</html>
